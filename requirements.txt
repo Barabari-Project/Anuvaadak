@@ -1,0 +1,2 @@
+git+https://github.com/openai/whisper.git@9f70a352f9f8630ab3aa0d06af5cb9532bd8c21d#egg=whisper
+yt-dlp==2022.10.4
