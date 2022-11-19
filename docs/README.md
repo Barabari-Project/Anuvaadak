@@ -15,6 +15,3 @@ We will use the following as models
 - Frontend
 - APIs
 - Docs
-
-## Optimisations
-Whisper - https://github.com/openai/whisper/discussions/208 (CPP)
