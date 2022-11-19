@@ -2,3 +2,14 @@
 **/.DS_Store
 
 .env
+
+node_modules
+/build
+/.svelte-kit
+/package
+!.env.example
+
+*.pyc
+__pycache__
+*.egg-info
+build/
