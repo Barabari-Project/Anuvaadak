@@ -1,6 +1,6 @@
 <div align="center">
 <a  href="//youtu.be/ip51Y5v3WLk">
-    <img width="250px" src="./client/static/logo.svg" alt="Prime <3"/>
+    <img width="250px" src="./client/public/images/logo.svg" alt="Prime <3"/>
 </a>
 <h2>Barabari Anuvaadak</h2>
 </div>
@@ -11,15 +11,13 @@ A translator wrapper for TBP internal usage, will probably extend with APIs to a
 
 ## Resources
 We will use the following as models
-- OpenAI/Whisper - Language transcription and transaltion
-- [EXPT:] [OpenAI/GPT3](https://openai.com/api/) - Translation
-- [EXPT:] facebook/NLLB - Translation
+- [OpenAI/Whisper](https://github.com/openai/whisper) - Transcription & Translation
+- [OpenAI/GPT3](https://openai.com/api/) - Text Translation
 
 ## Structure
-- Server: Python Based
+- Server: Python Based (with API)
 - Model: Idk yet frankly
 - Frontend: SvelteKit (JS)
-- APIs: If at all we need any
 - Docs: Docsify Vue Docs
 
 ## Optimisations
