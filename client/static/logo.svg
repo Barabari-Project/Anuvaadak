@@ -9,6 +9,6 @@
     <rect x="0" y="0" width="100%" height="100%" fill="#fadf0b"/>
     <text x="288" y="384" fill="#9a4cec">ब</text>
     <polygon points="0,0 192,0 320,512 0,512" fill="#9a4cec" />
-    <text x="4" y="384" fill="#eee">B</text>
+    <text x="4" y="384" fill="#eee" font-size="0.95em">B</text>
   </g>
 </svg>

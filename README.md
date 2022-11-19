@@ -1,8 +1,8 @@
 <div align="center">
 <a  href="//youtu.be/ip51Y5v3WLk">
-    <img width="200px" src="./client/static/logo.svg" alt="Prime <3"/>
+    <img width="250px" src="./client/static/logo.svg" alt="Prime <3"/>
 </a>
-<h1>Anuvaadak</h1>
+<h2>Barabari Anuvaadak</h2>
 </div>
 
 A translator wrapper for TBP internal usage, will probably extend with APIs to automatically generate resources like forms

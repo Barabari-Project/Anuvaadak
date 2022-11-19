@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "docs": "docsify serve docs"
+        "docs": "docsify serve docs",
+        "youtube": "cd model && python3 whisper.py"
     }
 }
