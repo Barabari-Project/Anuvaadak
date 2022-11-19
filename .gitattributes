@@ -1,0 +1,4 @@
+# Linguist overrides
+docs/* linguist-documentation=false
+*.md linguist-detectable=true linguist-language=Vue
+*.html linguist-language=Vue
