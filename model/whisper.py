@@ -3,8 +3,12 @@ import whisper
 model = whisper.load_model('small.en')
 
 
+def downloadFile(url):
+    # somehowdownload
+
+
 def getTranscript(url):
-    # CODE TO DOWNLOAD URL
+    downloadFile(url)  # & store & convert
 
     # Transcribe
     out = model.transcribe('clip.mp3')

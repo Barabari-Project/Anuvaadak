@@ -2,5 +2,10 @@
     "scripts": {
         "docs": "docsify serve docs",
         "youtube": "cd model && python3 whisper.py"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^1.1.0",
+        "svelte": "^3.52.0",
+        "vite": "^3.2.3"
     }
 }

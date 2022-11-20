@@ -1,6 +1,10 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 
+# import sys
+# sys.path.append('../model/')
+# import getTranscript from model.whisper
+
 hostName = "localhost"
 serverPort = 8080
 
