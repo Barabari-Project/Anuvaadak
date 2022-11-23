@@ -1,14 +1,12 @@
 # syntax=docker/dockerfile:1
-FROM python:3.8-slim-buster
-
-# docker pull jarredsumner/bun:edge
-# docker run --rm --init --ulimit memlock=-1:-1 jarredsumner/bun:edge
-
+FROM jarredsumner/bun:edge
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+COPY package.json package.json
+COPY bun.lockb bun.lockb
+RUN bun install
 
 COPY . .
 
-CMD [ "python3", "server.py"]
+EXPOSE 3000
+ENTRYPOINT ["bun", "index.js"]
