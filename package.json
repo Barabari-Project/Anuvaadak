@@ -1,7 +1,8 @@
 {
     "scripts": {
         "docs": "docsify serve docs",
-        "youtube": "cd model && python3 whisper.py"
+        "client": "cd client && npm run start",
+        "server": "cd server && python3 server.py"
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.1.0",

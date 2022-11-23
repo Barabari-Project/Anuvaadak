@@ -1,13 +1,16 @@
 <script>
   import Select from "./select.svelte";
-  let funcs = [
-    { id: 1, text: `Translate` },
-    { id: 2, text: `Transcribe` },
-  ];
-  let langs = [
-    { id: 1, text: `Hindi` },
-    { id: 2, text: `Bengali` },
-  ];
+
+  export let _GET, _POST;
+
+  let funcs = Object.freeze([
+    { id: 1, text: "Translate" },
+    { id: 2, text: "Transcribe" },
+  ]);
+  let langs = Object.freeze([
+    { id: 1, text: "Hindi" },
+    { id: 2, text: "Bengali" },
+  ]);
 
   let //
     func = funcs[0],
@@ -17,7 +20,7 @@
 </script>
 
 <form class="p10" style="background:rgb(97,65,204);">
-  <div class="head p20 f">
+  <div class="p20 f" style="width: calc(100% - 40px);">
     <h1>Barabari Anuvaadak:</h1>
     <div class="f p5" style="margin:0.75em 0;">
       <Select options={funcs} bind:selected={func} />
@@ -70,9 +73,6 @@
     border: 1px solid green;
     flex: 4;
     height: auto;
-  }
-  .head {
-    width: calc(100% - 40px);
   }
   .disabled {
     opacity: 0.5;

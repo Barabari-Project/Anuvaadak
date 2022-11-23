@@ -1,36 +1,43 @@
 #!/usr/bin/env python
-"""
-./dummy-web-server.py -l localhost -p 3000
-Send a POST request:
-    curl -d "foo=bar&bin=baz" http://localhost:3000
+"""./dummy-web-server.py -l localhost -p 3000
+Send a POST request: curl -d "foo=bar&bin=baz" http://localhost:3000
 """
 import argparse
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
 
 
 class S(BaseHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
-        self.send_header("Content-type", "text/html")
+        self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
 
     def _html(self, message):
-        """This just generates an HTML document that includes `message`
-        in the body. Override, or re-write this do do more interesting stuff.
-
-        """
         content = f"<html><body><h1>{message}</h1></body></html>"
         return content.encode("utf8")  # NOTE: must return a bytes object!
 
     def do_GET(self):
+        url = urlparse(self.path)
+        query = parse_qs(url.query)
+        content = self._html("Are you sure this is what you needed?")
+        if self.path.startswith('/anuvaad'):
+            content = bytes(
+                str(self.headers) + "\n" +
+                self.requestline + "\n",
+                'utf8')
+
         self._set_headers()
-        self.wfile.write(self._html("hi!"))
+        self.wfile.write(content)
 
     def do_HEAD(self):
         self._set_headers()
 
     def do_POST(self):
-        # Doesn't do anything with posted data
+        url = urlparse(self.path)
+        query = parse_qs(url.query)
+        print(query)
+
         self._set_headers()
         self.wfile.write(self._html("POST!"))
 
@@ -44,7 +51,6 @@ def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=3000):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(description="Run a simple HTTP server")
     parser.add_argument(
         "-l",
