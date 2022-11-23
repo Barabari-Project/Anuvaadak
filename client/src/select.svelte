@@ -25,8 +25,9 @@
         border: 0;
         box-shadow: none;
         /* Personalize */
+        font-size: 16px;
         flex: 1;
-        padding: 0 1em;
+        padding: 0 0.75em;
         color: #fff;
         background-color: var(--darkgray);
         background-image: none;
@@ -40,7 +41,7 @@
     .select {
         position: relative;
         display: flex;
-        width: 20em;
+        width: 10em;
         height: 3em;
         border-radius: 0.25em;
         overflow: hidden;
