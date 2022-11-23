@@ -1,7 +1,7 @@
 {
     "scripts": {
         "docs": "docsify serve docs",
-        "client": "cd client && npm run start",
+        "client": "cd client && npm run dev",
         "server": "cd server && python3 server.py"
     },
     "devDependencies": {

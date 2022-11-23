@@ -7,19 +7,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="https://barabari.nukes.in/css/atoms.css">
+  <link rel="stylesheet" href="https://barabari.nukes.in/css/frames.css">
+  <link rel="stylesheet" href="https://barabari.nukes.in/css/ui.css">
+
+  <link rel="stylesheet" href="//unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script> -->
 </head>
 
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      executeScript: true,
+      loadSidebar: true,
+      name: 'Anuvaadak',
+      repo: 'barabari-project/Anuvaadak',
+      themeColor: '#9a4cec',
+      relativePath: true,
+      loadSidebar: true,
+      noEmoji: true,
+      notFoundPage: true,
+      subMaxLevel: 3,
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- CODE -->
+  <script async defer src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+
+  <style>
+    .docsify-copy-code-button {
+      font-size: 12px;
+      border-radius: 5px;
+      margin: 5px;
+    }
+
+    .github-corner {
+      display: none;
+    }
+
+    input {
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      border: 1px solid #8888;
+      font-size: 1em;
+      outline: none;
+    }
+
+    .soft-border {
+      border: 1px solid #8888;
+    }
+
+    input:focus {
+      border: 1px solid var(--theme-color);
+    }
+
+    .md-typeset div.arithmatex {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    img {
+      border-radius: 10px;
+      border: 1px solid #8888;
+      max-width: min(100%, 600px);
+      max-height: 300px;
+    }
+
+    table,
+    td,
+    th,
+    tr {
+      outline: none !important;
+      border: none !important;
+    }
+
+    table {
+      border: 1px solid #8882 !important;
+      border-radius: 10px;
+      overflow-x: scroll;
+    }
+
+    tr {
+      border: 1px solid #4441 !important;
+    }
+
+    td {
+      border: none !important;
+    }
+
+    body {
+      font-weight: 400;
+    }
+  </style>
+  <script>
+    mermaid.initialize( { securityLevel: 'loose' } );
+  </script>
 </body>
 
 </html>

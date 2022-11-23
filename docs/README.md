@@ -1,17 +1,18 @@
-# anuvaadak
+# Anuvaadak
 A translator wrapper for TBP internal usage, will probably extend with APIs to automatically generate resources like forms
 
-> Currently both in progress and experimental. Please assume basically everything can change.
+<div align="center">
+    <img class="mx-a b0" height="300px" width="300px" src="./assets/logo.svg" />
+</div>
+
+## Features
+- Directly Transcribe and Translate Youtube Video from URL
+- Translate english to [any more languages 0 config]
+    - Bengali
+    - English
+    - Hindi
 
 ## Resources
-We will use the following as models
-- OpenAI/Whisper - Language transcription and transaltion
-- [EXPT:] [OpenAI/GPT3](https://openai.com/api/) - Translation
-- [EXPT:] facebook/NLLB - Translation
-
-## Structure
-- Server
-- Model
-- Frontend
-- APIs
-- Docs
+We will use the following as models, both based on OpenAI system so that at least now we're not dependent on some mega corporation at a security risk.
+- [OpenAI/Whisper](//github.com/openai/whisper) - Transcription & Translation
+- [OpenAI/GPT3](//openai.com/api/) - For Translation

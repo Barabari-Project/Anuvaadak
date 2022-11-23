@@ -5,12 +5,23 @@ Send a POST request: curl -d "foo=bar&bin=baz" http://localhost:3000
 import argparse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
+from pywhisper import main as whisper
+
+model = "small"
+isHTML = True
+
+# link = "https://www.youtube.com/watch?v=UF8uR6Z6KLc"
+# result = main(link, model)
+# print(result)
 
 
 class S(BaseHTTPRequestHandler):
-    def _set_headers(self):
+    def _set_headers(self, html):
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain; charset=utf-8')
+        if html:
+            self.send_header('Content-type', 'text/html')
+        else:
+            self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
 
     def _html(self, message):
@@ -20,25 +31,25 @@ class S(BaseHTTPRequestHandler):
     def do_GET(self):
         url = urlparse(self.path)
         query = parse_qs(url.query)
-        content = self._html("Are you sure this is what you needed?")
-        if self.path.startswith('/anuvaad'):
-            content = bytes(
-                str(self.headers) + "\n" +
-                self.requestline + "\n",
-                'utf8')
 
-        self._set_headers()
+        content = self._html("Are you sure this is what you needed?")
+
+        if self.path.startswith('/anuvaad'):
+            isHTML = False
+            content = bytes(str(query), 'utf8')
+
+        self._set_headers(isHTML)
         self.wfile.write(content)
 
     def do_HEAD(self):
-        self._set_headers()
+        self._set_headers(isHTML)
 
     def do_POST(self):
         url = urlparse(self.path)
         query = parse_qs(url.query)
         print(query)
 
-        self._set_headers()
+        self._set_headers(isHTML)
         self.wfile.write(self._html("POST!"))
 
 

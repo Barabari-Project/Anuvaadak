@@ -1,5 +1,6 @@
 <script>
   import Select from "./select.svelte";
+  import { YT } from "./lib";
 
   export let _GET, _POST;
 
@@ -19,7 +20,11 @@
   $: isTranslate = func?.text === "Translate";
 </script>
 
-<form class="p10" style="background:rgb(97,65,204);">
+<form
+  class="p10"
+  style="background:rgb(97,65,204);min-width: 100vw;min-height: 100vh;"
+  on:submit|preventDefault={console.log}
+>
   <div class="p20 f" style="width: calc(100% - 40px);">
     <h1>Barabari Anuvaadak:</h1>
     <div class="f p5" style="margin:0.75em 0;">
@@ -52,9 +57,16 @@
     <div class="f-col j-ct" style="flex:1;">
       <div
         class="p5 rx20 mx-a fw7"
-        style="font-size:1.25rem;line-height: 1em;background:var(--yellow);color:#222;width:1.5em;height:1.5em;"
+        style="line-height:1em;background:var(--yellow);color:#222;width:2.5em;height:2.5em;"
       >
-        &rarr;
+        <!-- https://dribbble.com/shots/15041751-Download-animation -->
+        <!-- Animations -->
+        <input
+          style="font-size:1.55rem;"
+          class="rpm-0 b0 fw7"
+          type="submit"
+          value="&rarr;"
+        />
       </div>
     </div>
     <div class="lrc">
@@ -65,10 +77,6 @@
 </form>
 
 <style>
-  form {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
   .lrc {
     border: 1px solid green;
     flex: 4;
@@ -91,6 +99,10 @@
   textarea::placeholder,
   input[type="text"]::placeholder {
     color: #4448;
+  }
+  input[type="submit"]:disabled {
+    pointer-events: none;
+    opacity: 0.5;
   }
   textarea {
     min-height: 300px;
