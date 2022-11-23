@@ -1,11 +1,9 @@
 <div align="center">
-    <img width="250px" src="./client/public/images/logo.svg" alt="Prime <3"/>
-<h2>Barabari Anuvaadak</h2>
+    <img width="250px" src="./client/public/logo.svg" alt="Anuvaadak Logo"/>
+<h2><a href="//anuvaadak.nukes.in">Barabari Anuvaadak</a></h2>
 </div>
 
-A translator wrapper for TBP internal usage, will probably extend with APIs to automatically generate resources like forms
-
-> Project currently is both in progress and experimental. Please assume basically everything can change.
+A Translator wrapper for TBP, planned extensions with APIs to automatically work on forms, docs
 
 ## Structure
 - Server: Python Based (with API)
