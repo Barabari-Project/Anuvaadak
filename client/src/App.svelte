@@ -1,14 +1,15 @@
 <script>
   import Select from "./select.svelte";
+  import Input from "./inputs.svelte";
   import { YT } from "./lib";
 
   export let _GET, _POST;
 
-  let funcs = Object.freeze([
+  const funcs = Object.freeze([
     { id: 1, text: "Translate" },
     { id: 2, text: "Transcribe" },
   ]);
-  let langs = Object.freeze([
+  const langs = Object.freeze([
     { id: 1, text: "Hindi" },
     { id: 2, text: "Bengali" },
   ]);
@@ -37,22 +38,7 @@
   <div class="f fw w-100 tc" style="min-height: 75vh;height:auto;">
     <div class="lrc">
       <h2>{func?.text} Input</h2>
-      <h4 class:disabled={isTranslate}>Transcription URL</h4>
-      <input
-        class="rx5 b0 p5"
-        type="text"
-        placeholder={isTranslate ? "disabled" : "Enter URL"}
-        disabled={isTranslate}
-      />
-      <br />
-      <h4 class:disabled={!isTranslate}>Raw Text</h4>
-      <textarea
-        class="rx5 b0 p5"
-        placeholder={!isTranslate ? "disabled" : "Enter Text To Translate"}
-        name="out"
-        id="out"
-        disabled={!isTranslate}
-      />
+      <Input {isTranslate} />
     </div>
     <div class="f-col j-ct" style="flex:1;">
       <div
@@ -71,7 +57,7 @@
     </div>
     <div class="lrc">
       <h2>Output</h2>
-      <textarea class="rx5 b0 p5" name="out" id="out" />
+      <textarea class="rx5 b0 p5" id="output" />
     </div>
   </div>
 </form>
@@ -82,22 +68,16 @@
     flex: 4;
     height: auto;
   }
-  .disabled {
-    opacity: 0.5;
-  }
-  textarea,
-  input[type="text"] {
+  textarea {
     height: auto;
     min-width: 90%;
     background: #fff8;
   }
-  textarea:disabled,
-  input[type="text"]:disabled {
+  textarea:disabled {
     background: #fff4;
     pointer-events: none;
   }
-  textarea::placeholder,
-  input[type="text"]::placeholder {
+  textarea::placeholder {
     color: #4448;
   }
   input[type="submit"]:disabled {

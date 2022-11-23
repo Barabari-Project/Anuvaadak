@@ -6,9 +6,22 @@ import argparse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 from pywhisper import main as whisper
+import socket
 
 model = "small"
 isHTML = True
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    conn, addr = s.accept()
+    with conn:
+        print(f"Connected by {addr}")
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            conn.sendall(data)
 
 # link = "https://www.youtube.com/watch?v=UF8uR6Z6KLc"
 # result = main(link, model)
