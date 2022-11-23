@@ -7,6 +7,7 @@
   "dependencies": {
     "@fastify/autoload": "^5.0.0",
     "@fastify/sensible": "^5.0.0",
+    "bun-types": "^0.2.2",
     "bunrest": "^1.1.6",
     "fastify": "^4.0.0",
     "fastify-cli": "^5.6.0",
