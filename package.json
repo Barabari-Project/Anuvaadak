@@ -1,9 +1,9 @@
 {
   "scripts": {
     "docs": "docsify serve docs",
-    "build": "cd client && npm run build && cd ..",
+    "build": "cd client && bun run build && cd ..",
     "start": "bun ./server/index.ts",
-    "client": "cd client && npm run dev",
+    "client": "cd client && bun run dev",
     "server": "cd server && python3 server.py"
   },
   "dependencies": {
