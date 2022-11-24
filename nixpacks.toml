@@ -1,4 +1,4 @@
-providers = ['...', 'bun', 'python']
+providers = ['...', 'python']
 
 [phases.setup]
 
