@@ -1,5 +1,6 @@
 # https://github.com/oven-sh/bun/issues/211
-FROM alpine:3.14
+# FROM alpine:3.14
+FROM debian:stable-slim as get
 # Install python/pip
 ENV PYTHONUNBUFFERED=1
 RUN apk add --no-cache python3 py3-pip
@@ -12,6 +13,9 @@ RUN curl --fail --location --progress-bar --output "/bun/bun.zip" "https://githu
 RUN unzip -d /bun -q -o "/bun/bun.zip"
 RUN mv /bun/bun-linux-x64/bun /usr/local/bin/bun
 RUN chmod 777 /usr/local/bin/bun
+
+FROM debian:stable-slim
+COPY --from=get /usr/local/bin/bun /bin/bun
 
 WORKDIR /app
 RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser
