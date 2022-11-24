@@ -1,4 +1,4 @@
-yt-dlp==2022.10.4
+git+https://github.com/yt-dlp/yt-dlp#egg=ytd
 openai
 setuptools-rust
 pywhisper

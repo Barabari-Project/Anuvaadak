@@ -1,4 +1,4 @@
-from yt_dlp import YoutubeDL
+from ytd import YoutubeDL
 import pywhisper
 import os
 
