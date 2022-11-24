@@ -1,4 +1,4 @@
-git+https://github.com/yt-dlp/yt-dlp#egg=ytd
+git+https://github.com/Barabari-Project/ydown#egg=ydown
 openai
 setuptools-rust
 pywhisper

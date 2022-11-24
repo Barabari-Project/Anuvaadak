@@ -1,4 +1,4 @@
-from ytd import YoutubeDL
+from ydown import YoutubeDL
 import pywhisper
 import os
 
