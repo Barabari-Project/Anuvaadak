@@ -1,12 +1,4 @@
 providers = ['...', 'python']
 
 [phases.setup]
-
-[phases.install]
-cmds = ['bun i --no-save && pip install -r requirements.txt --no-cache']
-
-[phases.build]
-cmds = ['cd client && bun run build && cd ..']
-
-[start]
-cmd = 'bun ./server/index.ts'
+nixPkgs = ["...", "bun", "ffmpeg"]

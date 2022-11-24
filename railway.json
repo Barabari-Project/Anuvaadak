@@ -5,7 +5,7 @@
         "buildCommand": "cd client && bun run build && cd .."
     },
     "deploy": {
-        "startCommand": "bun start",
+        "startCommand": "bun ./server/index.ts",
         "restartPolicyType": "never"
     }
 }
