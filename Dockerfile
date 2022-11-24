@@ -1,8 +1,8 @@
 # https://github.com/oven-sh/bun/issues/211
 # FROM alpine:3.14
 FROM debian:stable-slim as get
-ENV PYTHONUNBUFFERED=1
-RUN apt-get install -y python
+# ENV PYTHONUNBUFFERED=1
+# RUN apt-get install -y python
 # INSTALL BUN
 WORKDIR /bun
 
