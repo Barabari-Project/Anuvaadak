@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "start": "bun ./index.ts"
-  }
-}
