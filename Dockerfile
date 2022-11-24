@@ -2,8 +2,8 @@
 # FROM alpine:3.14
 FROM debian:stable-slim as get
 # Install python/pip
-ENV PYTHONUNBUFFERED=1
-RUN sudo apt-get install -y python
+# ENV PYTHONUNBUFFERED=1
+# RUN sudo apt-get install -y python
 # INSTALL BUN
 WORKDIR /bun
 
