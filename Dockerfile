@@ -3,8 +3,7 @@
 FROM debian:stable-slim as get
 # Install python/pip
 ENV PYTHONUNBUFFERED=1
-RUN apt-get update && apt-get install -y \
-    python-pip
+RUN sudo apt-get install -y python
 # INSTALL BUN
 WORKDIR /bun
 
