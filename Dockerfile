@@ -21,6 +21,8 @@ RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser
 RUN chown -R 101:101 /app && chmod -R g+w /app
 USER appuser
 COPY . ./
+
+RUN apt-get install python -y
 # INSTALL REQUIEMNTS
 # RUN
 # RUN pip3 install -r requirements.txt
