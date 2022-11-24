@@ -4,7 +4,7 @@
         selected;
 </script>
 
-<div class="select">
+<div class="select hover_scale">
     <select bind:value={selected}>
         {#each options as op}
             <option value={op}>{op.text}</option>
@@ -14,12 +14,10 @@
 
 <style>
     :root {
-        --gray: #34495e;
-        --darkgray: #2c3e50;
+        --darkgray: 250, 222, 10;
     }
 
     select {
-        /* Reset Select */
         appearance: none;
         outline: 0;
         border: 0;
@@ -28,31 +26,31 @@
         font-size: 16px;
         flex: 1;
         padding: 0 0.75em;
-        color: #fff;
-        background-color: var(--darkgray);
+        color: #000;
+        background-color: rgb(var(--darkgray));
         background-image: none;
-        cursor: pointer;
     }
+
     /* Remove IE arrow */
     select::-ms-expand {
         display: none;
     }
-    /* Custom Select wrapper */
     .select {
         position: relative;
         display: flex;
-        width: 10em;
-        height: 3em;
+        width: 9em;
+        height: 2.75em;
         border-radius: 0.25em;
         overflow: hidden;
     }
     /* Arrow */
     .select::after {
         content: "\25BC";
+        color: #000;
         position: absolute;
-        top: 2px;
+        top: 4px;
         right: 2px;
-        padding: 0.82em;
+        padding: 0.6em;
         transition: 0.25s all ease;
         pointer-events: none;
     }

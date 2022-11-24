@@ -1,3 +1,13 @@
+export const funcs = Object.freeze( [
+    { id: 1, text: "Translate" },
+    { id: 2, text: "Transcribe" },
+] );
+export const langs = Object.freeze( [
+    { id: 1, text: "Hindi" },
+    { id: 2, text: "Bengali" },
+] );
+
+
 const yt2std = ( url ) => {
     let id;
     if ( url.includes( "youtube.com" ) )
@@ -11,3 +21,5 @@ const yt2std = ( url ) => {
 export const YT = {
     toURL: yt2std
 }
+
+export const ws = new WebSocket( "ws://localhost:3000/" );

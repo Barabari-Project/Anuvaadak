@@ -1,30 +1,32 @@
 <script>
   import Select from "./select.svelte";
   import Input from "./inputs.svelte";
-  import { YT } from "./lib";
+  import { YT, ws, langs, funcs } from "./lib";
+  import { onDestroy, onMount } from "svelte";
 
   export let _GET, _POST;
-
-  const funcs = Object.freeze([
-    { id: 1, text: "Translate" },
-    { id: 2, text: "Transcribe" },
-  ]);
-  const langs = Object.freeze([
-    { id: 1, text: "Hindi" },
-    { id: 2, text: "Bengali" },
-  ]);
 
   let //
     func = funcs[0],
     lang = langs[0];
 
   $: isTranslate = func?.text === "Translate";
+
+  onMount(() => {
+    ws.onmessage = ({ data }) => console.log(data);
+    setInterval(() => ws.send("ping"), 5e3);
+  });
+  onDestroy(() => ws.close());
+
+  const onSubmit = () => {
+    //
+  };
 </script>
 
 <form
   class="p10"
   style="background:rgb(97,65,204);min-width: 100vw;min-height: 100vh;"
-  on:submit|preventDefault={console.log}
+  on:submit|preventDefault={onSubmit}
 >
   <div class="p20 f" style="width: calc(100% - 40px);">
     <h1>Barabari Anuvaadak:</h1>
@@ -42,14 +44,12 @@
     </div>
     <div class="f-col j-ct" style="flex:1;">
       <div
-        class="p5 rx20 mx-a fw7"
+        class="p5 rx20 mx-a fw7 hover_scale"
         style="line-height:1em;background:var(--yellow);color:#222;width:2.5em;height:2.5em;"
       >
-        <!-- https://dribbble.com/shots/15041751-Download-animation -->
-        <!-- Animations -->
         <input
           style="font-size:1.55rem;"
-          class="rpm-0 b0 fw7"
+          class="rpm-0 b0 fw7 "
           type="submit"
           value="&rarr;"
         />
