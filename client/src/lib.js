@@ -7,7 +7,7 @@ export const langs = Object.freeze( [
     { id: 2, text: "Bengali" },
 ] );
 
-
+export const ider = () => ( +new Date() ).toString( 36 );
 const yt2std = ( url ) => {
     let id;
     if ( url.includes( "youtube.com" ) )

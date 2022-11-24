@@ -1,14 +1,20 @@
 <script>
   import Select from "./select.svelte";
   import Input from "./inputs.svelte";
-  import { YT, ws, langs, funcs } from "./lib";
+  import { YT, ws, langs, funcs, ider } from "./lib";
   import { onDestroy, onMount } from "svelte";
 
   export let _GET, _POST;
 
   let //
     func = funcs[0],
-    lang = langs[0];
+    lang = langs[0],
+    id = ider();
+
+  let //
+    outText = "",
+    inText = "",
+    inURL = "";
 
   $: isTranslate = func?.text === "Translate";
 
@@ -19,7 +25,8 @@
   onDestroy(() => ws.close());
 
   const onSubmit = () => {
-    //
+    console.log(inText, inURL);
+    id = ider();
   };
 </script>
 
@@ -40,7 +47,7 @@
   <div class="f fw w-100 tc" style="min-height: 75vh;height:auto;">
     <div class="lrc">
       <h2>{func?.text} Input</h2>
-      <Input {isTranslate} />
+      <Input {isTranslate} bind:inURL bind:inText />
     </div>
     <div class="f-col j-ct" style="flex:1;">
       <div
@@ -54,10 +61,13 @@
           value="&rarr;"
         />
       </div>
+      <div class="rpm-10" style="background:var(--yellow);color: #000;">
+        ID: {id}
+      </div>
     </div>
     <div class="lrc">
       <h2>Output</h2>
-      <textarea class="rx5 b0 p5" id="output" />
+      <textarea class="rx5 b0 p5" id="output" bind:value={outText} />
     </div>
   </div>
 </form>

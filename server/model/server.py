@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 from pywhisper import main as whisper
+from gpt import translate as gpt
+import sys
 
 model = "small"
-isHTML = True
+args = sys.argv[1:]
+func = args[0]
+url = args[1]
 
-link = "https://www.youtube.com/watch?v=UF8uR6Z6KLc"
-result = whisper(link, model)
-print(result)
+print('Func:', str(func), " Lang: ", str(url))
+
+if func == "transcribe":
+    link = url
+    result = whisper(link, model)
+    print(result)
