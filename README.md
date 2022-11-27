@@ -12,15 +12,15 @@ A wrapper for multiple AI Models built by other people to make it easy to use. P
 
 
 <!-- ## VARIABLES -->
-[BashIcon]: https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bash_Logo_black_and_white_icon_only.svg/1024px-Bash_Logo_black_and_white_icon_only.svg.png?20180723054438
-[PytorchIcon]: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PyTorch_logo_icon.svg/1200px-PyTorch_logo_icon.svg.png
-[tfIcon]: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1915px-Tensorflow_logo.svg.png
+[BashIcon]: ./docs/assets/bash.svg
+[PytorchIcon]: ./docs/assets/pytorch.svg
+[tfIcon]: ./docs/assets/tf.svg
 
-[MetaIcon]: https://www.freelogovectors.net/svg10/facebook-meta-logo-freelogovectors.net_.svg
-[NvidiaIcon]: https://cdn-icons-png.flaticon.com/512/732/732230.png
-[GoogleIcon]: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png
-[DeepMindIcon]: https://avatars.githubusercontent.com/u/8596759?s=280&v=4
-[OpenAIIcon]: https://seeklogo.com/images/O/open-ai-logo-8B9BFEDC26-seeklogo.com.png
+[MetaIcon]: ./docs/assets/meta.png
+[NvidiaIcon]: ./docs/assets/nvidia.svg
+[GoogleIcon]: ./docs/assets/google.svg
+[DeepMindIcon]: ./docs/assets/deepmind.png
+[OpenAIIcon]: ./docs/assets/openai.png
 
 <style>
     img[alt$=".icon"]{
@@ -47,8 +47,8 @@ Format: `NameLink [Model | Implementation(s)] - Usage`
 
 - [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] - Transcription followed by Translation
 - [x]![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] - Translation
-- [] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis
-- [] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis
+- [] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
+- [] ![pytorch.icon][PytorchIcon] [Silero Models](https://analyticsvidhya.com/blog/2022/06/multilingual-text-to-speech-models-for-indic-languages/) [ ? | ?  ] - For Indic Specific Audio Synthesis
 - [] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis
 
 
