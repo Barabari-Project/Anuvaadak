@@ -1,6 +1,7 @@
 from scipy.io.wavfile import write
 import torch
 
+# TODO: MAP CUDA TO CPU ONLY
 waveglow = torch.hub.load(
     'NVIDIA/DeepLearningExamples:torchhub', 'nvidia_waveglow', model_math='fp32')
 # Prepare the WaveGlow model for inference

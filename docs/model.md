@@ -28,8 +28,6 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 - [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Transcription followed by Translation
 - [x] ![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Translation
 - [ ] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] : For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
-- [ ] ![pytorch.icon][PytorchIcon] [Silero Models](https://analyticsvidhya.com/blog/2022/06/multilingual-text-to-speech-models-for-indic-languages/) [ ? | ?  ] : For Indic Specific Audio Synthesis
-- [ ] ![pytorch.icon][PytorchIcon] [Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
 - [ ] ![pytorch.icon][PytorchIcon] [Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
 
 ## Optimisations & Planned Features
@@ -37,3 +35,8 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 - https://developers.redhat.com/blog/2017/11/16/speed-python-using-rust#now_let_s_build_it_with_cargo
 - https://sanic.dev/en/guide/getting-started.html#install
 - https://github.com/mozilla/TTS#example-synthesizing-speech-on-terminal-using-the-released-models
+
+## Tacotron
+Tacotron models will probably have to be manually trained with Common Voice data - https://commonvoice.mozilla.org/en
+
+[Check Here for Usage Example](https://github.com/s3nh/pytorch-tacotron2)
