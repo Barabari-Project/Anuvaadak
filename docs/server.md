@@ -1,5 +1,5 @@
 # Server
-Currently server will be in Python on Sanic but in long term as stable release is out, server will move to Bun with FFIs for all optimizations for sake of speed and safety.
+Currently server will be in Python on Sanic but in long term as stable release is out, server will move to Bun with FFIs for all optimizations for sake of speed and safety. Meanwhile to keep spirits high, immediately post development of a part, all python will be converted to Cython
 
 Create a `.env` file in root and add the following environment variables as needed
 ```shell
