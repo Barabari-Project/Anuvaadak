@@ -1,11 +1,13 @@
 <img align="left" width="200px" src="./docs/assets/logo.svg" alt="Anuvaadak Logo"/>
 <h2><a href="//anuvaadak.nukes.in">Barabari Anuvaadak</a></h2>
 
-A wrapper for multiple AI Models built by other people to make it easy for the Barabari Team to use. Does *Transcription, Translation & Synthesis* with Planned APIs for forms and docs
-
-Currently very crude and slow. Optimisations coming soon
+A wrapper for multiple AI Models built by other people to make it easy for the Barabari Team. \
+**Transcription, Translation & Synthesis** with Planned APIs for forms and docs
 
 ![Size](https://img.shields.io/github/repo-size/barabari-project/Anuvaadak?style=for-the-badge)
+
+<p><br/></p>
+<p><br/></p>
 
 <hr/>
 
