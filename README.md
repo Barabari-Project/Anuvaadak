@@ -19,9 +19,7 @@ A wrapper for multiple AI Models built by other people to make it easy to use. P
 
 <style>
     img[alt$=".icon"]{
-        max-width: 16px;
         max-height: 16px;
-        aspect-ratio: 1;
         object-fit: contain;
     }
 </style>
@@ -40,14 +38,11 @@ A wrapper for multiple AI Models built by other people to make it easy to use. P
 Format: `NameLink [Model | Implementation(s)] : Usage`
 
 - [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Transcription followed by Translation
-- [x]![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Translation
+- [x] ![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Translation
 - [] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] : For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
 - [] ![pytorch.icon][PytorchIcon] [Silero Models](https://analyticsvidhya.com/blog/2022/06/multilingual-text-to-speech-models-for-indic-languages/) [ ? | ?  ] : For Indic Specific Audio Synthesis
 - [] ![pytorch.icon][PytorchIcon][Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
 - [] ![pytorch.icon][PytorchIcon][Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
-
-
-
 
 ## Optimisations & Planned Features
 - Whisper : https://github.com/openai/whisper/discussions/208 (CPP)
@@ -58,7 +53,5 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 
 ## Features
 - Directly Transcribe and Translate Youtube Video from URL
-- Translate english to [any more languages 0 config]
-    - Bengali
-    - English
-    - Hindi
+- Translate english to x language
+- Synthesize Speech from x text in same language
