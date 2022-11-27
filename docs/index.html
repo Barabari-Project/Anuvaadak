@@ -26,6 +26,7 @@
       loadSidebar: true,
       name: 'Anuvaadak',
       repo: 'barabari-project/Anuvaadak',
+      logo: '/assets/logo.svg',
       themeColor: '#9a4cec',
       relativePath: true,
       loadSidebar: true,
@@ -114,7 +115,10 @@
     }
   </style>
   <script>
-    mermaid.initialize( { securityLevel: 'loose' } );
+    mermaid.initialize( {
+      securityLevel: 'loose',
+      sequence: { showSequenceNumbers: true }
+    } );
   </script>
 </body>
 

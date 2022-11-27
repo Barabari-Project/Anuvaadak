@@ -1,9 +1,5 @@
 from sanic import Sanic, Request, Websocket
 from sanic.response import text, json
-import socket
-import signal
-import sys
-import os
 
 app = Sanic("MyHelloWorldApp")
 

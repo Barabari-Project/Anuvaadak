@@ -2,5 +2,6 @@
 
 * [🔡 Anuvaadak](/)
 * [👨‍💻 Client](./client.md)
-* [🤖 Server & Model](./server.md)
+* [🤖 Server](./server.md)
+* [𐄳 Models](./model.md)
 * [🐳 Docker Host](./docker.md)
