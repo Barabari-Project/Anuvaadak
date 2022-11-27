@@ -40,3 +40,12 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 Tacotron models will probably have to be manually trained with Common Voice data - https://commonvoice.mozilla.org/en
 
 [Check Here for Usage Example](https://github.com/s3nh/pytorch-tacotron2)
+
+## Comparisons
+Very clearly all inferences of FastSpeech are ORDERS of magnitude faster than Transformer TTS despite being marginally less accurate, on an average FastSpeech is 40x faster than Transformer-TTS with Mel+Waveglow and 300x faster without Waveglow
+
+[Benchmark 1](https://www.microsoft.com/en-us/research/blog/fastspeech-new-text-to-speech-model-improves-on-speed-accuracy-and-controllability/)
+[Benchmark 2](https://speechresearch.github.io/fastspeech/)
+
+![FastSpeech](./images/comparisons.png)
+![FastSpeech](./images/fastvstts.png)

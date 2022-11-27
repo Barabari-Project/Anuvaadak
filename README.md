@@ -1,9 +1,13 @@
-<div align="center">
-    <img width="250px" src="./client/public/logo.svg" alt="Anuvaadak Logo"/>
+<img align="left" width="200px" src="./docs/assets/logo.svg" alt="Anuvaadak Logo"/>
 <h2><a href="//anuvaadak.nukes.in">Barabari Anuvaadak</a></h2>
-</div>
 
-A wrapper for multiple AI Models built by other people to make it easy for the Barabari Team to use. Planned API extensions for forms and docs
+A wrapper for multiple AI Models built by other people to make it easy for the Barabari Team to use. Does *Transcription, Translation & Synthesis* with Planned APIs for forms and docs
+
+Currently very crude and slow. Optimisations coming soon
+
+![Size](https://img.shields.io/github/repo-size/barabari-project/Anuvaadak?style=for-the-badge)
+
+<hr/>
 
 <!-- ## VARIABLES -->
 [BashIcon]: ./docs/assets/bash.svg
@@ -33,7 +37,8 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 - [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Transcription followed by Translation
 - [x] ![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Translation
 - [ ] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] : For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
-- [ ] ![pytorch.icon][PytorchIcon] [Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
+- [ ] ![pytorch.icon][PytorchIcon] [FastSpeech 2](https://github.com/ming024/FastSpeech2) [ ![Msft.icon][MsftIcon] | ?  ] : For Audio Synthesis
+- [ ] ![tf.icon][tfIcon] [Transformer TTS](https://github.com/as-ideas/TransformerTTS) [ ? | ?  ] : For Audio Synthesis
 
 ## Optimisations & Planned Features
 - Whisper : https://github.com/openai/whisper/discussions/208 (CPP)

@@ -1,14 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" font-family="Helvetica" font-size="320" viewBox="0 0 512 512" font-weight="700">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Helvetica" font-size="320" font-weight="700" viewBox="0 0 512 512">
   <defs>
-    <clipPath id="round">
-        <rect x="0" y="0" width="100%" height="100%" rx="20%"/>
+    <clipPath id="a">
+			<path d="M225.5 12q27.7-16 55.4 0l169.7 98q27.7 16 27.7 48v196q0 32-27.7 48L281 500q-27.7 16-55.4 0L55.7 402Q28 386 28 354V158q0-32 27.7-48Z"/>
     </clipPath>
   </defs>
-
-  <g clip-path="url(#round)">
-    <rect x="0" y="0" width="100%" height="100%" fill="#fadf0b"/>
-    <text x="288" y="384" fill="#9a4cec">ब</text>
-    <polygon points="0,0 192,0 320,512 0,512" fill="#9a4cec" />
-    <text x="4" y="384" fill="#eee" font-size="0.95em">B</text>
+  <g clip-path="url(#a)">
+    <path fill="#fff" d="M225.5 12q27.7-16 55.4 0l169.7 98q27.7 16 27.7 48v196q0 32-27.7 48L281 500q-27.7 16-55.4 0L55.7 402Q28 386 28 354V158q0-32 27.7-48Z"/>
+    <rect width="100%" height="100%" fill="#fadf0b"/>
+    <text x="268" y="352" fill="#9a4cec">ब</text>
+    <path fill="#9a4cec" d="M0 0h192l128 512H0z"/>
+    <text x="20" y="378" fill="#eee" font-size=".9em">B</text>
   </g>
+    <path stroke="#fff" stroke-width="8" fill="transparent" d="M225.5 12q27.7-16 55.4 0l169.7 98q27.7 16 27.7 48v196q0 32-27.7 48L281 500q-27.7 16-55.4 0L55.7 402Q28 386 28 354V158q0-32 27.7-48Z"/>
 </svg>
