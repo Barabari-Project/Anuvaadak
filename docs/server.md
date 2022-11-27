@@ -1,4 +1,6 @@
 # Server
+Currently server will be in Python on Sanic but in long term as stable release is out, server will move to Bun with FFIs for all optimizations for sake of speed and safety.
+
 Create a `.env` file in root and add the following environment variables as needed
 ```shell
 # For OpenAI GPT-3
