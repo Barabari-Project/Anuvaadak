@@ -1,5 +1,5 @@
 # Docker Host
-`not made yet`
+The docker will be made only to make usage easier and env consistent. It is not designed to be hosted on railway or heroku due to the absolute size of the project
 
 ## Using Debian
 <!-- https://pythonspeed.com/articles/alpine-docker-python/ -->
