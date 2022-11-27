@@ -5,17 +5,12 @@
 
 A wrapper for multiple AI Models built by other people to make it easy to use. Planned API extensions for forms and docs
 
-## Structure
-- Server: Python Based (with API)
-- Frontend: SvelteKit (JS)
-- Docs: Docsify Vue Docs
-
-
 <!-- ## VARIABLES -->
 [BashIcon]: ./docs/assets/bash.svg
 [PytorchIcon]: ./docs/assets/pytorch.svg
 [tfIcon]: ./docs/assets/tf.svg
 
+[MsftIcon]: ./docs/assets/microsoft.svg
 [MetaIcon]: ./docs/assets/meta.png
 [NvidiaIcon]: ./docs/assets/nvidia.svg
 [GoogleIcon]: ./docs/assets/google.svg
@@ -31,31 +26,31 @@ A wrapper for multiple AI Models built by other people to make it easy to use. P
     }
 </style>
 
-## Current Plans for Used Models
-| Icon                           | Name       |
-|--------------------------------|------------|
-| ![DeepMind.icon][DeepMindIcon] | DeepMind   |
-| ![OpenAI.icon][OpenAIIcon]     | OpenAI     |
-| ![Google.icon][GoogleIcon]     | Google     |
-| ![Meta.icon][MetaIcon]         | Meta       |
-| ![Nvidia.icon][NvidiaIcon]     | Nvidia     |
-| ![tf.icon][tfIcon]             | TensorFlow |
+## Current Model Plans
+| Icon                           | Name       | |Icon| Name|
+|--------------------------------|------------|-|-|-|
+| ![DeepMind.icon][DeepMindIcon] | DeepMind   | | ![Microsoft.icon][MsftIcon]         | Microsoft |
+| ![OpenAI.icon][OpenAIIcon]     | OpenAI     | | ![Meta.icon][MetaIcon]         | Meta       |
+| ![Google.icon][GoogleIcon]     | Google     | | ![Nvidia.icon][NvidiaIcon]     | Nvidia     |
+
+<!-- | ![tf.icon][tfIcon]             | TensorFlow |
 | ![pytorch.icon][PytorchIcon]   | Pytorch    |
-| ![bash.icon][BashIcon]   | Shell/Binary    |
+| ![bash.icon][BashIcon]   | Shell/Binary    | -->
 
-Format: `NameLink [Model | Implementation(s)] - Usage`
+Format: `NameLink [Model | Implementation(s)] : Usage`
 
-- [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] - Transcription followed by Translation
-- [x]![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] - Translation
-- [] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
-- [] ![pytorch.icon][PytorchIcon] [Silero Models](https://analyticsvidhya.com/blog/2022/06/multilingual-text-to-speech-models-for-indic-languages/) [ ? | ?  ] - For Indic Specific Audio Synthesis
-- [] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] - For Audio Synthesis
+- [x] ![bash.icon][BashIcon] [OpenAI/Whisper](https://github.com/openai/whisper) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Transcription followed by Translation
+- [x]![bash.icon][BashIcon]  [OpenAI/GPT3](https://openai.com/api/) [![OpenAI.icon][OpenAIIcon] | ![OpenAI.icon][OpenAIIcon]] : Translation
+- [] ![pytorch.icon][PytorchIcon] [Nvidia Tacotron2](https://pytorch.org/hub/nvidia_deeplearningexamples_tacotron2/) [ ![Google.icon][GoogleIcon] | ![Nvidia.icon][NvidiaIcon]  ] : For Audio Synthesis [Repo](https://github.com/NVIDIA/tacotron2)
+- [] ![pytorch.icon][PytorchIcon] [Silero Models](https://analyticsvidhya.com/blog/2022/06/multilingual-text-to-speech-models-for-indic-languages/) [ ? | ?  ] : For Indic Specific Audio Synthesis
+- [] ![pytorch.icon][PytorchIcon][Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
+- [] ![pytorch.icon][PytorchIcon][Indpenedent Tacotron2](https://github.com/Tomiinek/Multilingual_Text_to_Speech) [ ? | ?  ] : For Audio Synthesis
 
 
 
 
 ## Optimisations & Planned Features
-- Whisper - https://github.com/openai/whisper/discussions/208 (CPP)
+- Whisper : https://github.com/openai/whisper/discussions/208 (CPP)
 - https://developers.redhat.com/blog/2017/11/16/speed-python-using-rust#now_let_s_build_it_with_cargo
 - https://sanic.dev/en/guide/getting-started.html#install
 - https://github.com/mozilla/TTS#example-synthesizing-speech-on-terminal-using-the-released-models
