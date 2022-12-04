@@ -1,29 +1,34 @@
-# https://github.com/oven-sh/bun/issues/211
-# FROM alpine:3.14
-FROM debian:stable-slim as get
-# ENV PYTHONUNBUFFERED=1
-# RUN apt-get install -y python
-# INSTALL BUN
-WORKDIR /bun
+FROM ubuntu:latest
 
-RUN apt-get update
-RUN apt-get install curl unzip -y
-RUN curl --fail --location --progress-bar --output "/bun/bun.zip" "https://github.com/oven-sh/bun/releases/download/bun-v0.2.2/bun-linux-x64.zip"
-RUN unzip -d /bun -q -o "/bun/bun.zip"
-RUN mv /bun/bun-linux-x64/bun /usr/local/bin/bun
-RUN chmod 777 /usr/local/bin/bun
+# Update and install necessary packages & set locale
+RUN apt-get update && apt-get install -y sudo locales curl unzip python3 git && rm -rf /var/lib/apt/lists/* && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py | bash
+RUN python3 get-pip.py
+RUN rm get-pip.py | bash
 
-FROM debian:stable-slim
-COPY --from=get /usr/local/bin/bun /bin/bun
+# create user - docker
+RUN adduser --disabled-password --gecos "" --shell /bin/bash docker
+RUN usermod -g sudo docker
+RUN passwd -d docker
+RUN adduser docker sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+# switch user to docker
+USER docker
+
+# install bun
+RUN curl https://bun.sh/install | bash
+
+RUN echo 'export BUN_INSTALL="$HOME/.bun"' >> ~/.bashrc
+RUN echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> ~/.bashrc
+RUN . ~/.bashrc
+
+# create app folder and copy content to app folder
+RUN sudo mkdir -p app
 WORKDIR /app
-RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser
-RUN chown -R 101:101 /app && chmod -R g+w /app
-USER appuser
 COPY . ./
 
-RUN apt-get install python -y
-# INSTALL REQUIEMNTS
-# RUN
-# RUN pip3 install -r requirements.txt
-CMD bun run server.js
+RUN pip3 install -r requirements.txt
+
+RUN python3 ./server/server.py
