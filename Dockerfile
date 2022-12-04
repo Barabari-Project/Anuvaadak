@@ -26,7 +26,7 @@ RUN . ~/.bashrc
 # create app folder and copy content to app folder
 RUN sudo mkdir -p app
 WORKDIR /app
-COPY . ./
+COPY . .
 
 RUN pip3 install -r requirements.txt
 

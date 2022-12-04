@@ -5,9 +5,12 @@ app = Sanic("MyHelloWorldApp")
 
 
 @app.get("/")
-async def hello_world(request: Request, ws: Websocket):
+async def hello_world(request: Request):
     return text("Hello, world.")
 
+# @app.get("/")
+# async def hello_world(request: Request, ws: Websocket):
+#     return text("Hello, world.")
 
 @app.websocket("/feed")
 async def feed(request: Request, ws: Websocket):
