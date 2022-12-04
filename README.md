@@ -6,8 +6,7 @@ A wrapper for multiple AI Models built by other people to make it easy for the B
 
 ![Size](https://img.shields.io/github/repo-size/barabari-project/Anuvaadak?style=for-the-badge)
 
-<p><br/></p>
-<p><br/></p>
+<p>&nbsp;</p>
 
 <hr/>
 
