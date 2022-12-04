@@ -1,7 +1,8 @@
+# https://github.com/plutoniumm/SvCRUD REFERENCE
 FROM ubuntu:latest
 
 # Update and install necessary packages & set locale
-RUN apt-get update && apt-get install -y sudo locales curl unzip python3 git && rm -rf /var/lib/apt/lists/* && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+RUN apt-get update && apt-get install -y sudo locales curl unzip python3 && rm -rf /var/lib/apt/lists/* && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py | bash
 RUN python3 get-pip.py

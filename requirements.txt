@@ -1,4 +1,3 @@
-# git+https://github.com/Barabari-Project/ydown#egg=ydown
 yt-dlp
 openai
 setuptools-rust
@@ -11,4 +10,4 @@ unidecode
 inflect
 sanic
 
-# recommended also being installed, will need to check those as well. 
+# recommended also being installed, will need to check those as well.
