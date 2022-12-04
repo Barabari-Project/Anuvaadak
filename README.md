@@ -47,6 +47,9 @@ Format: `NameLink [Model | Implementation(s)] : Usage`
 - https://sanic.dev/en/guide/getting-started.html#install
 - https://github.com/mozilla/TTS#example-synthesizing-speech-on-terminal-using-the-released-models
 
+## DOCKER Ref URLS
+- https://ubuntu.com/blog/we-reduced-our-docker-images-by-60-with-no-install-recommends
+- https://github.com/plutoniumm/SvCRUD
 
 ## Features
 - Directly Transcribe and Translate Youtube Video from URL
