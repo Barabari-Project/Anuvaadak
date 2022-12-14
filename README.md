@@ -1,5 +1,5 @@
 <img align="left" width="200px" src="./docs/assets/logo.svg" alt="Anuvaadak Logo"/>
-<h2><a href="//anuvaadak.nukes.in">Barabari Anuvaadak</a></h2>
+<h2><a href="//anuvaadak.nukes.in">Anuvaadak Project</a></h2>
 
 A wrapper for multiple AI Models built by other people to make it easy for the Barabari Team. \
 **Transcription, Translation & Synthesis** with Planned APIs for forms and docs
